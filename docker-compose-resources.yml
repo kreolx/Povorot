@@ -1,0 +1,20 @@
+# resources example
+
+version: '3.7'
+
+networks:
+  resources:
+    external: true
+
+services:
+  postgis:
+    image: postgis/postgis:latest
+    volumes:
+      - ./povorot_db:/var/lib/postgresql/data
+    ports: ["5432:5432"]
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    networks:
+      - resources
+    restart: always

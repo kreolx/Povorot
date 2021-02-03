@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Povorot.Api", "Povorot.Api\Povorot.Api.csproj", "{52176473-7149-4E5C-9D25-4D19313BB39B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Povorot.DAL", "Povorot.DAL\Povorot.DAL.csproj", "{BE0F083A-3601-4EEC-865B-726B71AD875A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52176473-7149-4E5C-9D25-4D19313BB39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52176473-7149-4E5C-9D25-4D19313BB39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE0F083A-3601-4EEC-865B-726B71AD875A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE0F083A-3601-4EEC-865B-726B71AD875A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+EndGlobal
