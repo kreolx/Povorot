@@ -119,7 +119,7 @@ namespace Povorot.Api.Controllers
             mechanic.Phonenumber = requestDto.Phonenumber;
             mechanic.FirstName = requestDto.FirstName;
             mechanic.LastName = requestDto.LastName;
-            await _unitOfWork.Mechanics.Update(mechanic);
+            _unitOfWork.Mechanics.Update(mechanic);
             await _unitOfWork.Save(1);
             return Ok();
         }

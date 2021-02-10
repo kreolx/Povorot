@@ -30,9 +30,14 @@ namespace Povorot.Api
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
-            Configuration = configuration;
+            var confBuilder = new ConfigurationBuilder()
+                .SetBasePath(environment.ContentRootPath)
+                .AddJsonFile("appsettings.json", false)
+                .AddJsonFile($"appsettings-{environment.EnvironmentName}.json", true)
+                .AddEnvironmentVariables();
+            Configuration = confBuilder.Build();
             Log.Logger = new LoggerConfiguration()
                 .Enrich.FromLogContext()
                 .ReadFrom.Configuration(Configuration)

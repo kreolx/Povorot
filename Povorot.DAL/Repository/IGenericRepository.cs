@@ -16,7 +16,7 @@ namespace Povorot.DAL.Repository
 
         Task Create(T model);
         Task CreateRange(ICollection<T> models);
-        Task Update(T model);
+        void Update(T model);
         void UpdateRange(ICollection<T> models);
         Task Delete(long id);
         void Delete(T model);

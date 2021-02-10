@@ -102,7 +102,7 @@ namespace Povorot.Api.Controllers
                 station.Name = requestDto.Name;
                 station.EndWorkTime = requestDto.EndWorkTime;
                 station.StartWorkTime = requestDto.StartWorkTime;
-                await _unitOfWork.CarStations.Update(station);
+                _unitOfWork.CarStations.Update(station);
                 await _unitOfWork.Save(1);
                 return Ok();
             }
@@ -178,7 +178,7 @@ namespace Povorot.Api.Controllers
                 CarStation = station
             };
             station.RepairPosts.Add(post);
-            await _unitOfWork.CarStations.Update(station);
+            _unitOfWork.CarStations.Update(station);
             await _unitOfWork.Save(1);
             return Ok();
         }
@@ -231,7 +231,7 @@ namespace Povorot.Api.Controllers
             if (post == null)
                 return NotFound();
             post.Name = requestDto.Name;
-            await _unitOfWork.RepairPosts.Update(post);
+            _unitOfWork.RepairPosts.Update(post);
             await _unitOfWork.Save(1);
             return Ok();
         }

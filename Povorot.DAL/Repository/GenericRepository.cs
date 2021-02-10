@@ -66,7 +66,7 @@ namespace Povorot.DAL.Repository
             await _db.AddRangeAsync(models);
         }
 
-        public async Task Update(T model)
+        public void Update(T model)
         {
             _db.Attach(model);
             _context.Entry(model).State = EntityState.Modified;
