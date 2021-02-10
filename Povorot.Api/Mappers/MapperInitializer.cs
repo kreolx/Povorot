@@ -16,6 +16,8 @@ namespace Povorot.Mappers
             CreateMap<CarStation, IdNameDto>();
             CreateMap<Mechanic, MechanicDto>().ReverseMap();
             CreateMap<Mechanic, MechanicCreateDto>();
+            CreateMap<WorkCategory, WorkCategoryDto>().ReverseMap();
+            CreateMap<WorkCategory, WorkCategoryCreateDto>().ReverseMap();
         }
     }
 }
